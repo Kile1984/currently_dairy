@@ -1,0 +1,232 @@
+.footer {
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(14rem, 1fr));
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  &__tittle {
+    grid-column: 3 / span 4;
+
+    font-size: 3.6rem;
+    color: #000;
+    font-weight: 800;
+    padding: 0 1.2rem;
+    line-height: 1.4;
+
+    @include respond(tab-land) {
+      grid-column: 2 / span 6;
+    }
+
+    @include respond(tab-port) {
+      grid-column: 1 / -1;
+    }
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+  }
+
+  &__form {
+    grid-column: 3 / span 4;
+    margin: 6.4rem 0 8.6rem 0;
+
+    justify-self: center;
+
+    @include respond(tab-land) {
+      grid-column: 2 / span 6;
+      text-align: center;
+    }
+  }
+
+  &__input {
+    font-family: $font-text;
+    width: 40rem;
+    height: 4.5rem;
+    border: 1px solid rgba(#000, 0.3);
+    padding-left: 1.2rem;
+    margin-right: 1.2em;
+    border-radius: 3px;
+    background-color: transparent;
+    transition: all 0.3s;
+
+    @include respond(tab-land) {
+      display: block;
+      margin-right: 0;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: #fff;
+      border-color: $color-primary;
+    }
+  }
+
+  &__btn {
+    @include respond(tab-land) {
+      display: block;
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__heading {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    font-family: $font-text;
+  }
+
+  &__logo {
+    grid-column: 2 / span 1;
+    margin-bottom: 4rem;
+  }
+
+  &__logo-img {
+    width: 10rem;
+  }
+
+  &__social-icons {
+    grid-column: 7 / -1;
+  }
+
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  &__social-link,
+  &:link,
+  &:visited {
+    fill: $color-white;
+    display: inline-flex;
+    align-content: center;
+    align-items: center;
+    width: 3.6rem;
+    height: 3.6rem;
+    padding: 1rem;
+    border: 1px solid $color-white;
+    border-radius: 50%;
+    justify-content: center;
+    transition: all 0.7s;
+
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+
+    &:hover,
+    &:active {
+      fill: $color-primary;
+    }
+  }
+
+  &__line {
+    grid-column: 2 / span 6;
+    height: 0.1rem;
+    background-color: $color-white;
+    margin-bottom: 4rem;
+  }
+
+  &__about {
+    color: $color-white;
+    grid-column: 2 / span 2;
+
+    @include respond(tab-land) {
+      grid-column: 2 / span 3;
+      grid-row: 5 / 6;
+    }
+  }
+
+  &__links {
+    grid-column: 4 / span 2;
+    justify-self: center;
+
+    @include respond(tab-land) {
+      grid-column: 4 / span 4;
+      grid-row: 5 / 6;
+      justify-self: end;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__list-item {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__list-link,
+  &:link,
+  &:visited {
+    font-family: $font-text;
+    font-size: 1.6rem;
+    color: $color-white;
+    text-decoration: none;
+    transition: all 0.3s;
+
+    &:hover,
+    &:active {
+      color: rgba(#bcde85, 0.5);
+    }
+
+    &.active {
+      color: rgba(#bcde85, 0.5);
+    }
+  }
+
+  &__address {
+    font-style: normal;
+    grid-column: 7 / span 1;
+
+    @include respond(tab-land) {
+      // grid-row: 6 / span 1;
+      // grid-column: 4 / span 2;
+      grid-column: 2 / span 2;
+    }
+  }
+
+  &__street {
+    font-size: 1.4rem;
+    font-family: $font-text;
+    margin-bottom: 0.8rem;
+  }
+
+  &__phone,
+  &:link,
+  &:visited {
+    font-family: $font-text;
+    display: block;
+    color: $color-white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+
+    &:hover {
+      color: rgba(#bcde85, 0.5);
+    }
+  }
+
+  &__email,
+  &:link,
+  &:visited {
+    font-family: $font-text;
+    display: block;
+    color: $color-white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+
+    &:hover {
+      color: rgba(#bcde85, 0.5);
+    }
+  }
+}

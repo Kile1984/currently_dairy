@@ -1,0 +1,172 @@
+.nav {
+  background-color: $color-primary;
+  grid-column: 2 / span 6;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+
+  padding: 1rem 4rem;
+  border-radius: 16px;
+  z-index: 999;
+
+  &__logo {
+    width: 10rem;
+  }
+
+  &__list {
+    grid-column: 2 / span 4;
+    justify-self: center;
+
+    font-size: 2rem;
+    font-family: $font-text;
+
+    list-style-type: none;
+    display: flex;
+    z-index: 10;
+    transition: all 0.3s ease-in 0.2s;
+
+    &.open {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    @include respond(tab-land) {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateX(100%);
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+
+      flex-direction: column;
+      width: 300px;
+      height: 100%;
+
+      background-color: #e1edcd;
+    }
+  }
+
+  &__item {
+    @include respond(tab-land) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__link,
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: $color-white;
+    margin: 1rem 2rem;
+    transition: all 0.3s;
+
+    @include respond(tab-land) {
+      color: $color-secondary;
+    }
+
+    &:hover {
+      color: rgba(#bcde85, 0.5);
+
+      @include respond(tab-land) {
+        color: $color-primary;
+      }
+    }
+
+    &.active {
+      color: rgba(#bcde85, 0.5);
+
+      @include respond(tab-land) {
+        color: $color-primary;
+      }
+    }
+  }
+
+  // HAMBURGER
+  &__toggle {
+    display: none;
+
+    @include respond(tab-land) {
+      display: block;
+      background-color: transparent;
+      border: none;
+      border-radius: 0;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+
+      grid-column: 7/-1;
+      align-self: center;
+    }
+  }
+
+  &__toggle-bar {
+    display: block;
+    width: 20px;
+    height: 1px;
+    background-color: $color-white;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 2px;
+    right: 15px;
+    z-index: 20;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in 0.2s;
+
+    &.open {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__mobile-menu-overlay {
+    position: absolute;
+
+    @include respond(tab-land) {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      visibility: hidden;
+      opacity: 0;
+
+      &.open {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.sticky {
+  position: fixed;
+  width: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include respond(tab-land) {
+    position: static;
+    width: auto;
+    transform: none;
+  }
+}

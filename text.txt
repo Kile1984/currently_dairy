@@ -1,0 +1,18 @@
+- Home, About Us, Product, Contact
+- fonts: DM Serif & PT Serif
+- menu right icons ( search or bag...)
+- play video icon
+- slider arrows
+- HEADER full start full end--respond(1400px)
+- SECTION-1 center start center end
+-
+- VIDEO full start full end
+- SECTION-2 center start center end
+- SLIDER full start full end
+- SECTION-3 center start center end
+- SECTION-4 center start center end
+- SECTION-5 center start center end
+- PRODUCTS center start center end
+- BLOG center start center end
+- LOGOS center start center end
+- FOOTER full start full end

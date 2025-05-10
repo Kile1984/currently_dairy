@@ -1,0 +1,31 @@
+.deliver {
+  text-align: center;
+  h2 {
+    margin-bottom: 6.4rem;
+  }
+  span {
+    display: block;
+  }
+  &__boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-column-gap: 2.4rem;
+    grid-row-gap: 6.4rem;
+
+    @include respond(tab-land) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(2, minmax(25rem, 1fr));
+    }
+
+    h3 {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__icon {
+    width: 12rem;
+  }
+}

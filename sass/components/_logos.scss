@@ -1,0 +1,31 @@
+.logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-column-gap: 6.4rem;
+
+  border-top: 1px solid rgba($color-gray-light, 0.2);
+  border-bottom: 1px solid rgba($color-gray-light, 0.2);
+  padding: 12.8rem 0;
+
+  @include respond(tab-port) {
+    grid-row-gap: 2.4rem;
+    padding: 1.6rem 0;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(phone-small) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  &__img {
+    width: 100%;
+
+    @include respond(phone-small) {
+      width: 65%;
+      justify-self: center;
+    }
+  }
+}

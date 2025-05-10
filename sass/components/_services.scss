@@ -1,0 +1,65 @@
+.services {
+  &__tittle {
+    @include respond(tab-land) {
+      // grid-row: 4/5;
+      grid-column: 1/-1;
+    }
+  }
+  &__text {
+    font-size: 1.6rem;
+    color: $color-secondary;
+    line-height: 1.8;
+
+    grid-column: 1/1;
+    margin-bottom: 2rem;
+
+    @include respond(tab-land) {
+      grid-column: 1/-1;
+    }
+
+    &--right {
+      @include respond(tab-land) {
+        grid-column: 1/-1;
+        margin-bottom: 2.4rem;
+      }
+    }
+  }
+
+  &__btn--left {
+    grid-column: 1/1;
+    align-self: center;
+    justify-self: start;
+  }
+  &__btn--right {
+    grid-column: 2/-1;
+    align-self: center;
+    justify-self: start;
+
+    @include respond(tab-land) {
+      grid-column: 1/2;
+    }
+  }
+
+  &__img-1 {
+    grid-column: 1/1;
+    grid-row: 4/5;
+    border-radius: 1.2rem;
+    margin-left: 3.2rem;
+    width: 90%;
+
+    @include respond(tab-land) {
+      align-self: center;
+    }
+  }
+  &__img-2 {
+    grid-column: 2/-1;
+    grid-row: 3/5;
+    width: 90%;
+    justify-self: center;
+
+    @include respond(tab-land) {
+      grid-row: 4/5;
+      // align-self: center;
+    }
+  }
+}

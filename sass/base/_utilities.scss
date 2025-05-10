@@ -1,0 +1,23 @@
+.margin-bottom-medium {
+  margin-bottom: 9.6rem;
+}
+
+.margin-bottom-large {
+  margin-bottom: 12.8rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 9.6rem;
+  }
+
+  @include respond(phone) {
+    margin-bottom: 8rem;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.align-self-center {
+  align-self: center;
+}

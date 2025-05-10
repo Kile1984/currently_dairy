@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon_16x16.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/main.js"></script>
+    <title>Dairy</title>
+  </head>
+
+  <body class="container">
+    <!-- HEADER -->
+    <header class="header margin-bottom-medium">
+      <p class="header__text">That’s correct, we only sell pure organic</p>
+      <!-- social-icons -->
+      <div class="header__social-icons">
+        <a href="#" class="header__link">
+          <svg class="header__icon">
+            <use xlink:href="img/SVG/icons.svg#icon-twitter"></use>
+          </svg>
+        </a>
+
+        <a href="#" class="header__link">
+          <svg class="header__icon">
+            <use xlink:href="img/SVG/icons.svg#icon-facebook"></use>
+          </svg>
+        </a>
+
+        <a href="#" class="header__link">
+          <svg class="header__icon">
+            <use xlink:href="img/SVG/icons.svg#icon-instagram"></use>
+          </svg>
+        </a>
+
+        <a href="#" class="header__link">
+          <svg class="header__icon">
+            <use xlink:href="img/SVG/icons.svg#icon-linkedin2"></use>
+          </svg>
+        </a>
+      </div>
+
+      <!-- NAV -->
+      <nav class="nav">
+        <a href="index.html">
+          <img class="nav__logo logo-large" src="img/logo.png" alt="Logo" />
+        </a>
+
+        <button class="nav__toggle">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+        <button class="nav__close">&#10006;</button>
+        <div class="nav__mobile-menu-overlay"></div>
+
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link active"> Home </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="about.html" class="nav__link"> About us </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="services.html" class="nav__link"> Services </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="contact.html" class="nav__link"> Contact </a>
+          </li>
+        </ul>
+      </nav>
+
+      <h3 class="header__title">Pure & organic milk products</h3>
+      <h1 class="header__heading"><span>We deliver</span> natural foods</h1>
+
+      <button class="btn btn--primary header__btn">Discover more</button>
+    </header>
+
+    <!-- SERVICES -->
+    <section class="services margin-bottom-large">
+      <h2 class="heading-2 services__tittle">
+        We have been milk harvesting since 2000
+      </h2>
+      <p class="text services__text">
+        Consectetur adipisicing elit, sed do eiusmod tempore inci ut labore et
+        dolore mags aliqua. Ut enim ad minim veniamquis nostrud amet
+        exercitation esteus ullamco laboris nisi ut aliquip ex ea commodo.
+      </p>
+      <button class="btn btn--primary services__btn--left margin-bottom-medium">
+        Read more
+      </button>
+
+      <img
+        src="img/home_image_01-lazy.jpg"
+        data-src="img/home_image_01.jpg"
+        alt="Horse image"
+        class="services__img-1 margin-bottom-medium lazy-img"
+      />
+      <img
+        src="img/home_image_02-lazy.png"
+        data-src="img/home_image_02.png"
+        alt="Horse image"
+        class="services__img-2 lazy-img"
+      />
+
+      <h2 class="heading-2 services__tittle">Check our range of services</h2>
+      <p class="text text--dark services__text--right">
+        Rherum isepem dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
+        suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
+        lacus vel facilisis.
+      </p>
+
+      <button class="btn btn--primary services__btn--right">Read more</button>
+    </section>
+
+    <!-- OUR STORY -->
+    <section class="our-story" id="our-tours">
+      <h2 class="heading-2 our-story__heading">
+        Our story begins from the land down under foot
+      </h2>
+      <p class="text our-story__text">
+        Ornare arcu dui vivamus arcu. Praesent semper feugiat nibh sed pulvinar.
+        Aenean vel elit scelerisque mauris pellentesque pulvinar. Ac tortor
+        vitae purus faucibus ornare suspendisse Watch Video
+      </p>
+
+      <a class="play" href="#popup">
+        <svg class="play__icon">
+          <use xlink:href="img/SVG/icons.svg#icon-play2"></use>
+        </svg>
+        <p class="play__text">Watch Video</p>
+      </a>
+
+      <div id="popup" class="popup">
+        <figure class="popup__content">
+          <video class="video" controls loading="lazy">
+            <source src="img/video-popup.mp4" type="video/mp4" />
+            Vaš pretraživač ne podržava HTML5 video.
+          </video>
+        </figure>
+
+        <span class="popup__close">&times;</span>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features margin-bottom-large">
+      <img
+        src="img/home_image_03-lazy.jpg"
+        data-src="img/home_image_03.jpg"
+        alt="Person"
+        class="features__img-1"
+      />
+      <img
+        src="img/home_image_04.png"
+        data-src="img/home_image_04.png"
+        alt="Cow"
+        class="features__img-2"
+      />
+
+      <div class="features__special">
+        <h2 class="heading-2 features__tittle">Special features</h2>
+        <div class="features__box">
+          <img src="img/home_icon_01.png" alt="Bottle" class="features__icon" />
+          <h3 class="heading-3 features__heading-3">
+            Trendy harvesting equipment
+          </h3>
+          <p class="text text--dark">
+            Tempor commodo ullamcorper a lacus. Nisi scelerisque eu ultrices
+            vitae auctor. Sodales ut etiam.
+          </p>
+        </div>
+
+        <div class="features__box">
+          <img src="img/home_icon_02.png" alt="Bread" class="features__icon" />
+          <h3 class="heading-3 features__heading-3">
+            Incredible yield of milk
+          </h3>
+          <p class="text text--dark">
+            Blandit libero volutpat sed cras ornare. Amet nulla facilisi morbi
+            tempus iaculis urna. Etiam non quamy.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDER-1 -->
+    <section class="slider margin-bottom-large">
+      <div class="slider__slides">
+        <figure class="slider__slide">
+          <img
+            src="img/home_image_05-lazy.jpg"
+            data-src="img/home_image_05.jpg"
+            alt="Women"
+            class="slider__img"
+          />
+          <figcaption><span>01</span>Cow Shelter</figcaption>
+        </figure>
+
+        <figure class="slider__slide">
+          <img
+            src="img/home_image_06-lazy.jpg"
+            data-src="img/home_image_06.jpg"
+            alt="Cow"
+            class="slider__img"
+          />
+          <figcaption><span>02</span>Cow Shed</figcaption>
+        </figure>
+
+        <figure class="slider__slide">
+          <img
+            src="img/home_image_07-lazy.jpg"
+            data-src="img/home_image_07.jpg"
+            alt="Horse"
+            class="slider__img"
+          />
+          <figcaption><span>03</span>Cow Feed</figcaption>
+        </figure>
+      </div>
+
+      <div class="slider__box">
+        <h2 class="heading-2 slider__box-tittle">
+          Explore our ambiguous signifiers in our farm
+        </h2>
+
+        <div class="slider__arrows">
+          <div class="slider__arrow slider__arrow--left">
+            <svg>
+              <use xlink:href="img/SVG/icons.svg#icon-circle-left"></use>
+            </svg>
+          </div>
+          <div class="slider__arrow slider__arrow--right">
+            <svg>
+              <use xlink:href="img/SVG/icons.svg#icon-circle-right"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DELIVER -->
+    <section class="deliver margin-bottom-large">
+      <h2 class="heading-2">
+        <span>Milk and More!</span> Fresh, Elegant, Delivered
+      </h2>
+      <div class="deliver__boxes">
+        <div class="deliver__box">
+          <img
+            src="img/home_icon_03.png"
+            alt="Eco-energy"
+            class="deliver__icon"
+          />
+          <h3 class="heading-3">Eco-energy plant</h3>
+          <p class="text text--dark">
+            Orci porta non pulvinar neque laoreet suspendisse interdum consec
+            teturoiiou
+          </p>
+        </div>
+        <div class="deliver__box">
+          <img
+            src="img/home_icon_04.png"
+            alt="Biotech storage"
+            class="deliver__icon"
+          />
+          <h3 class="heading-3">Biotech storage</h3>
+          <p class="text text--dark">
+            Quam id leo in vitae turpis massa sed. Consectetur adipiscing elit
+            pellentesquet
+          </p>
+        </div>
+        <div class="deliver__box">
+          <img
+            src="img/home_icon_05.png"
+            alt="Organic invest"
+            class="deliver__icon"
+          />
+          <h3 class="heading-3">Organic invest</h3>
+          <p class="text text--dark">
+            Habitant morbi tristique senectus et. Varius quam quisque id diam
+            uiohytrfmkoi
+          </p>
+        </div>
+        <div class="deliver__box">
+          <img
+            src="img/home_icon_06.png"
+            alt="Natural feeds"
+            class="deliver__icon"
+          />
+          <h3 class="heading-3">Natural feeds</h3>
+          <p class="text text--dark">
+            Eu volutpat odio facilisis mauris sit. Vestibulum sed arcu non odio
+            euismodnonp
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials margin-bottom-large">
+      <div class="testimonials__text-box">
+        <h2 class="heading-2 testimonials__tittle">What people are saying</h2>
+        <p class="text text--dark testimonials__text">
+          Querum ipsum dolor rhuese onsectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
+          suspendisse
+        </p>
+        <button class="btn btn--primary">View more</button>
+      </div>
+
+      <div class="testimonials__slider">
+        <div class="testimonials__image">
+          <img
+            src="img/home_image_08-lazy.jpg"
+            data-src="img/home_image_08.jpg"
+            alt="Person"
+          />
+        </div>
+
+        <div class="testimonials__slider-container">
+          <div class="testimonials__slide">
+            <p class="text text--dark">
+              Ut pharetra sit amet aliquam id. Consequat semper viverra nam
+              libero justo laoreet sit amet. Porta nibh venenatis cras sed
+              felis. Eget nullam non nisi est sit amet facilisis magna. Dui
+              sapien eget mi proinyut
+            </p>
+            <cite>Thomas<span>Manager</span></cite>
+          </div>
+
+          <div class="testimonials__slide">
+            <p class="text text--dark">
+              Orci nulla pellentesque dignissim enim sit. Iaculis nunc sed augue
+              lacus viverra vitae congue eu consequat. Nunc lobortis mattis
+              aliquam faucibus purus in. Varius morbi enim nuncaucibus a
+              pellente treu
+            </p>
+            <cite>Jessica James<span>CEO</span></cite>
+          </div>
+
+          <div class="testimonials__slide">
+            <p class="text text--dark">
+              In aliquam sem fringilla ut morbi tincidunt augue interdum. Sit
+              amet consectetur adipiscing elit duis tristique sollicitudin nibh.
+              Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida
+              neque edele
+            </p>
+            <cite>Juslin<span>Director</span></cite>
+          </div>
+          <div class="dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq margin-bottom-large">
+      <div class="faq__questions">
+        <div class="faq__question-box">
+          <h3 class="heading-3 faq__question">
+            Which kind of milk is the most nutritious?
+            <span class="faq__icon">-</span>
+          </h3>
+          <p class="text faq__answer open">
+            Eget nulla facilisi etiam dignissim diam quis. Dui nunc mattis enim
+            ut tellus elementum. Sed blandit libero volutpat sed. Massa vitae
+            tortor condimentum lacinia quis vel eros donec ac. Purus ut faucibus
+            pulvinar elementum pus eges.
+          </p>
+        </div>
+
+        <div class="faq__question-box">
+          <h3 class="heading-3 faq__question">
+            Why do we add sugar to drinking milk?
+            <span class="faq__icon">+</span>
+          </h3>
+          <p class="text faq__answer">
+            Elementum tempus egestas sed sed risus pretium quam vulputate
+            dignissim. In massa tempor nec feugiat nisl pretium fusce id.
+            Pellentesque sit amet porttitor eget dolor morbi non arcu. Eget
+            nullam non nisi est tre tyurio.
+          </p>
+        </div>
+
+        <div class="faq__question-box">
+          <h3 class="heading-3 faq__question">
+            How is cow’s milk varied from other milk?
+            <span class="faq__icon">+</span>
+          </h3>
+          <p class="text faq__answer">
+            Egestas quis ipsum suspendisse ultrices gravida dictum fusce.
+            Sollicitudin nibh sit amet commodo nulla facilisi nullam. Felis
+            bibendum ut tristique et egestas quis ipsum. Eros in cursus turpis
+            massa tincidunt dui ut gretjhghm.
+          </p>
+        </div>
+
+        <div class="faq__question-box">
+          <h3 class="heading-3 faq__question">
+            How much milk need do the adults and kids?
+            <span class="faq__icon">+</span>
+          </h3>
+          <p class="text faq__answer">
+            Sed elementum tempus egestas sed sed. Sit amet commodo nulla
+            facilisi nullam vehicula ipsum. Dignissim cras tincidunt lobortis
+            feugiat vivamus at augue. Diam vulputate ut pharetra sit amet
+            aliquam. Magna fringilla urna juihhh.
+          </p>
+        </div>
+
+        <div class="faq__question-box">
+          <h3 class="heading-3 faq__question">
+            Is cow milk is great than other milk?
+            <span class="faq__icon">+</span>
+          </h3>
+          <p class="text faq__answer">
+            Magna fringilla urna porttitor rhoncus dolor purus non enim
+            praesent. Proin gravida hendrerit lectus a. Leo integer malesuada
+            nunc vel risus commodo viverra maecenas. Lobortis feugiat vivamus
+            augue eget pharetra sit.
+          </p>
+        </div>
+      </div>
+
+      <img
+        class="faq__img"
+        src="img/home_image_09-lazy.jpg"
+        data-src="img/home_image_09.jpg"
+        alt="Person holding milk jug"
+      />
+    </section>
+
+    <!-- LOGOS -->
+    <section class="logos">
+      <img src="img/home_brand_01.png" alt="Family farm" class="logos__img" />
+      <img src="img/home_brand_02.png" alt="Farm meat" class="logos__img" />
+      <img src="img/home_brand_03.png" alt="Gose farm" class="logos__img" />
+      <img src="img/home_brand_04.png" alt="Chicken farm" class="logos__img" />
+      <img src="img/home_brand_05.png" alt="Milk farm" class="logos__img" />
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <h1 class="footer__tittle text-center">
+        Join our email list and get the special events & offers directly in your
+        inbox!
+      </h1>
+
+      <form action="#" class="footer__form" aria-label="Newsletter signup form">
+        <input
+          type="email"
+          class="footer__input"
+          placeholder="Your email address"
+          aria-label="Email address"
+          required
+        />
+
+        <button type="submit" class="btn btn--black footer__btn">
+          Sign up
+        </button>
+      </form>
+
+      <a href="index.html" class="footer__logo">
+        <img src="img/logo.png" alt="Brand logo" class="footer__logo-img" />
+      </a>
+
+      <div class="footer__social-icons">
+        <a href="#" class="footer__social-link" aria-label="Twitter">
+          <svg class="footer__icon">
+            <use xlink:href="img/SVG/icons.svg#icon-twitter"></use>
+          </svg>
+        </a>
+
+        <a href="#" class="footer__social-link" aria-label="Facebook">
+          <svg class="footer__icon">
+            <use xlink:href="img/SVG/icons.svg#icon-facebook"></use>
+          </svg>
+        </a>
+
+        <a href="#" class="footer__social-link" aria-label="Instagram">
+          <svg class="footer__icon">
+            <use xlink:href="img/SVG/icons.svg#icon-instagram"></use>
+          </svg>
+        </a>
+
+        <a href="#" class="footer__social-link" aria-label="Linkedin">
+          <svg class="footer__icon">
+            <use xlink:href="img/SVG/icons.svg#icon-linkedin2"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="footer__line"></div>
+
+      <div class="footer__about">
+        <h3 class="footer__heading footer__about-heading">About Us</h3>
+        <p class="text footer__text">
+          Ulerse dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore.
+        </p>
+      </div>
+
+      <div class="footer__links">
+        <h3 class="footer__heading footer__links-heading">Our links</h3>
+        <ul class="footer__list text-center">
+          <li class="footer__list-item">
+            <a href="index.html" class="footer__list-link active">Home</a>
+          </li>
+          <li class="footer__list-item">
+            <a href="about.html" class="footer__list-link">About us</a>
+          </li>
+          <li class="footer__list-item">
+            <a href="services.html" class="footer__list-link">Services</a>
+          </li>
+          <li class="footer__list-item">
+            <a href="contact.html" class="footer__list-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <address class="footer__address">
+        <h3 class="footer__heading footer__address-heading">Contact us</h3>
+        <p class="footer__street">
+          No: 58 A, East Madison Street, Baltimore, MD, USA 4508
+        </p>
+
+        <a class="footer__phone" href="tel:+381601234567">+381601234567</a>
+
+        <a class="footer__email" href="mailto:info@example.com"
+          >info@example.com</a
+        >
+      </address>
+    </footer>
+  </body>
+</html>

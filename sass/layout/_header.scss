@@ -1,0 +1,121 @@
+.header {
+  // grid-column: 1/-1;
+  grid-column: full-start/full-end;
+  background-image: url(../../img/hero_01.png);
+  background-size: cover;
+  background-position: bottom;
+
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(5, min-content);
+
+  @include respond(tab-land) {
+    background-position: center;
+  }
+
+  &__text {
+    font-family: $font-text;
+    font-size: 1.6rem;
+    grid-column: 2 / span 5;
+    margin: 2rem;
+
+    @include respond(small-phone) {
+      text-align: center;
+      grid-column: 2/8;
+      margin-bottom: 0;
+    }
+  }
+
+  &__social-icons {
+    grid-column: 7 / span 1;
+
+    display: flex;
+    justify-content: end;
+
+    margin: 2rem;
+
+    @include respond(small-phone) {
+      grid-column: 2 / 8;
+      align-self: center;
+      justify-self: center;
+    }
+  }
+
+  &__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: $color-white;
+    margin: 0 0.8rem;
+    transition: all 0.3s;
+
+    &:hover {
+      fill: rgba(#bcde85, 0.5);
+    }
+  }
+
+  &__heading {
+    font-size: $heading-1;
+    line-height: 1;
+
+    grid-column: 2 / span 3;
+    margin-left: 2rem;
+
+    @include respond(tab-land) {
+      grid-column: 2 / span 5;
+    }
+
+    @include respond(tab-port) {
+      grid-column: 2/-1;
+    }
+
+    @include respond(phone) {
+      font-size: 6.2rem;
+    }
+
+    @include respond(small-phone) {
+      text-align: center;
+      grid-column: 2/8;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  &__title {
+    font-family: $font-text;
+    color: $color-white;
+    font-weight: 300;
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    grid-column: 2 / span 2;
+    margin-top: 10vw;
+    margin-left: 2rem;
+
+    @include respond(tab-land) {
+      grid-column: 2/-1;
+    }
+
+    @include respond(small-phone) {
+      grid-column: 2 / 8;
+      justify-self: center;
+    }
+  }
+
+  &__btn {
+    justify-self: start;
+    grid-column: 2/4;
+    margin-left: 2rem;
+    margin-top: 2rem;
+
+    @include respond(tab-port) {
+      width: 17rem;
+    }
+
+    @include respond(small-phone) {
+      grid-column: 2 / 8;
+      align-self: center;
+      justify-self: center;
+    }
+  }
+}

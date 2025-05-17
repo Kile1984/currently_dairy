@@ -2,24 +2,24 @@
 document.addEventListener('DOMContentLoaded', function () {
   // POPUP
 
-  function popup() {
-    const play = document.querySelector('.play');
-    const popup = document.querySelector('.popup');
-    const popupClose = document.querySelector('.popup__close');
-    const video = document.querySelector('.video');
+  // function popup() {
+  //   const play = document.querySelector('.play');
+  //   const popup = document.querySelector('.popup');
+  //   const popupClose = document.querySelector('.popup__close');
+  //   const video = document.querySelector('.video');
 
-    play.addEventListener('click', () => {
-      popup.classList.add('popup__open');
-    });
+  //   play.addEventListener('click', () => {
+  //     popup.classList.add('popup__open');
+  //   });
 
-    popupClose.addEventListener('click', () => {
-      popup.classList.remove('popup__open');
-      video.pause();
-      video.currentTime = 0;
-    });
-  }
+  //   popupClose.addEventListener('click', () => {
+  //     popup.classList.remove('popup__open');
+  //     video.pause();
+  //     video.currentTime = 0;
+  //   });
+  // }
 
-  popup();
+  // popup();
 
   //SLIDER
   function slider() {
@@ -254,7 +254,7 @@ const hamburger = function () {
   const navToggle = document.querySelector('.nav__toggle');
   const navList = document.querySelector('.nav__list');
   const close = document.querySelector('.nav__close');
-  console.log(close);
+
   const overlayVisibility = document.querySelector('.nav__mobile-menu-overlay');
 
   // navList.classList.add('close');

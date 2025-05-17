@@ -8,7 +8,13 @@
 
   padding: 1rem 4rem;
   border-radius: 16px;
-  z-index: 999;
+
+  @include respond(phone) {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    border-radius: 0;
+    // z-index: 1;
+  }
 
   &__logo {
     width: 10rem;
@@ -33,20 +39,19 @@
     }
 
     @include respond(tab-land) {
-      visibility: hidden;
-      opacity: 0;
-      transform: translateX(100%);
-
-      position: absolute;
+      position: fixed;
+      background-color: #e1edcd;
       top: 0;
       right: 0;
       bottom: 0;
+      width: 320px;
 
+      display: flex;
       flex-direction: column;
-      width: 300px;
-      height: 100%;
 
-      background-color: #e1edcd;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateX(100%);
     }
   }
 
@@ -98,9 +103,9 @@
       width: 20px;
       height: 20px;
       cursor: pointer;
-
       grid-column: 7/-1;
       align-self: center;
+      z-index: 1;
     }
   }
 
@@ -116,7 +121,7 @@
   }
 
   &__close {
-    position: absolute;
+    position: fixed;
     top: 2px;
     right: 15px;
     z-index: 20;
@@ -130,30 +135,29 @@
     visibility: hidden;
     opacity: 0;
     transition: all 0.3s ease-in 0.2s;
+    transform: translateX(100%);
 
     &.open {
       visibility: visible;
       opacity: 1;
+      transform: translateX(0);
     }
   }
 
   &__mobile-menu-overlay {
     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
 
-    @include respond(tab-land) {
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.3);
-      cursor: pointer;
-      visibility: hidden;
-      opacity: 0;
-
-      &.open {
-        visibility: visible;
-        opacity: 1;
-      }
+    &.open {
+      visibility: visible;
+      opacity: 1;
     }
   }
 }

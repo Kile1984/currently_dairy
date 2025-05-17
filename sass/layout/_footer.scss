@@ -1,10 +1,14 @@
 .footer {
   color: #fff;
   display: grid;
-  grid-template-columns: repeat(8, minmax(14rem, 1fr));
+  grid-template-columns: repeat(8, minmax(10rem, 1fr));
 
   @include respond(tab-land) {
     grid-template-columns: repeat(8, 1fr);
+  }
+
+  @include respond(phone) {
+    text-align: center;
   }
 
   &__tittle {
@@ -17,27 +21,21 @@
     line-height: 1.4;
 
     @include respond(tab-land) {
-      grid-column: 2 / span 6;
-    }
-
-    @include respond(tab-port) {
       grid-column: 1 / -1;
-    }
-
-    @include respond(phone) {
-      font-size: 3rem;
     }
   }
 
   &__form {
     grid-column: 3 / span 4;
     margin: 6.4rem 0 8.6rem 0;
-
     justify-self: center;
 
     @include respond(tab-land) {
       grid-column: 2 / span 6;
-      text-align: center;
+    }
+
+    @include respond(phone) {
+      grid-column: 1 / -1;
     }
   }
 
@@ -52,9 +50,9 @@
     background-color: transparent;
     transition: all 0.3s;
 
-    @include respond(tab-land) {
-      display: block;
-      margin-right: 0;
+    @include respond(phone) {
+      width: 90%;
+      margin-bottom: 1.2rem;
     }
 
     &:focus {
@@ -65,9 +63,7 @@
   }
 
   &__btn {
-    @include respond(tab-land) {
-      display: block;
-      margin-top: 1.5rem;
+    @include respond(phone) {
     }
   }
 
@@ -84,6 +80,10 @@
   &__logo {
     grid-column: 2 / span 1;
     margin-bottom: 4rem;
+
+    @include respond(phone) {
+      grid-column: 1 / -1;
+    }
   }
 
   &__logo-img {
@@ -91,7 +91,17 @@
   }
 
   &__social-icons {
-    grid-column: 7 / -1;
+    grid-column: 7 / span 1;
+
+    @media only screen and (max-width: 1400px) {
+      grid-column: 6 / span 2;
+      justify-self: end;
+    }
+
+    @include respond(phone) {
+      grid-column: 1 / -1;
+      justify-self: center;
+    }
   }
 
   &__icon {
@@ -129,6 +139,12 @@
     height: 0.1rem;
     background-color: $color-white;
     margin-bottom: 4rem;
+
+    @include respond(phone) {
+      grid-row: 5 / span 1;
+      grid-column: 1 / -1;
+      margin-top: 2.2rem;
+    }
   }
 
   &__about {
@@ -136,8 +152,15 @@
     grid-column: 2 / span 2;
 
     @include respond(tab-land) {
-      grid-column: 2 / span 3;
-      grid-row: 5 / 6;
+      grid-row: 5/6;
+      grid-column: 2 / span 2;
+    }
+
+    @include respond(phone) {
+      grid-row: 5 / span 1;
+      grid-column: 1 / -1;
+      margin-top: 4.8rem;
+      padding: 0 8rem;
     }
   }
 
@@ -146,9 +169,16 @@
     justify-self: center;
 
     @include respond(tab-land) {
-      grid-column: 4 / span 4;
-      grid-row: 5 / 6;
+      grid-row: 5/6;
+      grid-column: 6 / span 2;
       justify-self: end;
+    }
+
+    @include respond(phone) {
+      grid-row: 6 / span 1;
+      grid-column: 1 / -1;
+      justify-self: center;
+      margin-top: 4.8rem;
     }
   }
 
@@ -186,9 +216,16 @@
     grid-column: 7 / span 1;
 
     @include respond(tab-land) {
-      // grid-row: 6 / span 1;
-      // grid-column: 4 / span 2;
-      grid-column: 2 / span 2;
+      grid-row: 6/7;
+      grid-column: 4 / span 2;
+      text-align: center;
+    }
+
+    @include respond(phone) {
+      grid-row: 7 / span 1;
+      grid-column: 1 / -1;
+      justify-self: center;
+      margin-top: 4.8rem;
     }
   }
 

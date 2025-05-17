@@ -13,11 +13,11 @@
     grid-row-gap: 6.4rem;
 
     @include respond(tab-land) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr 1fr;
     }
 
-    @include respond(tab-port) {
-      grid-template-columns: repeat(2, minmax(25rem, 1fr));
+    @include respond(tab-land) {
+      grid-template-columns: 1fr;
     }
 
     h3 {

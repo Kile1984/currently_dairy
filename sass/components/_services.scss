@@ -1,8 +1,8 @@
 .services {
   &__tittle {
     @include respond(tab-land) {
-      // grid-row: 4/5;
       grid-column: 1/-1;
+      text-align: center;
     }
   }
   &__text {
@@ -16,13 +16,6 @@
     @include respond(tab-land) {
       grid-column: 1/-1;
     }
-
-    &--right {
-      @include respond(tab-land) {
-        grid-column: 1/-1;
-        margin-bottom: 2.4rem;
-      }
-    }
   }
 
   &__btn--left {
@@ -30,27 +23,31 @@
     align-self: center;
     justify-self: start;
   }
+
   &__btn--right {
     grid-column: 2/-1;
     align-self: center;
     justify-self: start;
 
     @include respond(tab-land) {
-      grid-column: 1/2;
+      grid-column: 1/-1;
     }
   }
 
   &__img-1 {
-    grid-column: 1/1;
+    grid-column: 1 / span 1;
     grid-row: 4/5;
     border-radius: 1.2rem;
     margin-left: 3.2rem;
     width: 90%;
 
-    @include respond(tab-land) {
-      align-self: center;
+    @include respond(phone) {
+      grid-column: 1 / -1;
+      width: 60%;
+      justify-self: center;
     }
   }
+
   &__img-2 {
     grid-column: 2/-1;
     grid-row: 3/5;
@@ -58,8 +55,15 @@
     justify-self: center;
 
     @include respond(tab-land) {
-      grid-row: 4/5;
-      // align-self: center;
+      grid-row: 4 / 5;
+    }
+
+    @include respond(phone) {
+      grid-column: 1 / -1;
+      grid-row: 5 / span 1;
+      width: 60%;
+      justify-self: center;
+      margin-bottom: 8.6rem;
     }
   }
 }

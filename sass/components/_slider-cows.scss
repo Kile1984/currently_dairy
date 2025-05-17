@@ -2,15 +2,13 @@
   &__slides {
     display: grid;
     grid-template-columns: 1fr 30vw 1fr;
-
-    @include respond(tab-port) {
-      grid-column: 1/-1;
-    }
+    overflow: hidden;
 
     @include respond(phone) {
-      grid-template-columns: 1fr 70vw 1fr;
+      grid-column: 1/-1;
+      margin-bottom: 2.4rem;
+      grid-template-columns: auto;
     }
-    overflow: hidden;
 
     & > :nth-child(1) {
       grid-column: 2/3;
@@ -54,15 +52,17 @@
     flex-direction: column;
     justify-content: center;
 
-    @include respond(tab-port) {
+    @include respond(phone) {
       grid-column: 1/-1;
-      grid-row: 1 / span 1;
+      text-align: center;
     }
   }
 
   &__box-tittle {
-    @include respond(tab-port) {
-      letter-spacing: 0;
+    @include respond(phone) {
+      order: 2;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid $color-primary;
     }
   }
 
@@ -70,8 +70,10 @@
     display: flex;
     gap: 3rem;
 
-    @include respond(tab-port) {
+    @include respond(phone) {
       justify-content: center;
+      order: 1;
+      margin-bottom: 3rem;
     }
   }
 

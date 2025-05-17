@@ -1,0 +1,21 @@
+.logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 6.4rem;
+
+  border-top: 1px solid rgba($color-gray-light, 0.2);
+  border-bottom: 1px solid rgba($color-gray-light, 0.2);
+  padding: 12.8rem 0;
+
+  @include respond(phone) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__img {
+    width: 100%;
+
+    @include respond(phone) {
+      width: 80%;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+.our-story {
+  &__heading {
+    grid-column: 4 / span 6;
+    color: inherit;
+    padding: 0 8rem;
+
+    @include respond(tab-port) {
+      grid-column: 1 / -1;
+      padding: 0 0.6rem;
+      font-size: 4.4rem;
+    }
+  }
+
+  &__text {
+    grid-column: 4 / span 6;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    padding: 0 8rem;
+
+    @include respond(tab-port) {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+// .play {
+//   grid-column: 4 / span 6;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin-top: 2rem;
+
+//   text-decoration: none;
+//   color: inherit;
+//   font-family: $font-text;
+
+//   &__icon {
+//     width: 5rem;
+//     height: 5rem;
+//     fill: $color-white;
+//     margin-right: 2rem;
+//   }
+
+//   &__text {
+//     font-size: 2rem;
+//   }
+// }
+// .popup {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   background-color: rgba(0, 0, 0, 0.8);
+//   height: 100vh;
+//   width: 100%;
+
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: all 0.3s;
+
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+//   &__open {
+//     opacity: 1;
+//     visibility: visible;
+//   }
+
+//   &__close,
+//   &:link,
+//   &:visited {
+//     font-size: 4rem;
+//     position: absolute;
+//     top: 5rem;
+//     right: 5rem;
+//     cursor: pointer;
+//     text-decoration: none;
+//     color: $color-white;
+//   }
+// }

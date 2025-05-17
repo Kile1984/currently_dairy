@@ -1,0 +1,97 @@
+.slider {
+  &__slides {
+    display: grid;
+    grid-template-columns: 1fr 30vw 1fr;
+    overflow: hidden;
+
+    @include respond(phone) {
+      grid-column: 1/-1;
+      margin-bottom: 2.4rem;
+      grid-template-columns: auto;
+    }
+
+    & > :nth-child(1) {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+
+    & > :nth-child(2) {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+
+    & > :nth-child(3) {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+  }
+
+  &__slide {
+    // padding-right: 4rem;
+    font-family: $font-text;
+    font-size: 1.6rem;
+    font-style: italic;
+    color: #000;
+    font-weight: 800;
+    text-align: end;
+    margin-top: 1.8rem;
+    transition: all 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+
+    span {
+      margin-right: 1.8rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 1.2rem;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include respond(phone) {
+      grid-column: 1/-1;
+      text-align: center;
+    }
+  }
+
+  &__box-tittle {
+    @include respond(phone) {
+      order: 2;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid $color-primary;
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    gap: 3rem;
+
+    @include respond(phone) {
+      justify-content: center;
+      order: 1;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__arrow--left {
+    svg {
+      width: 4rem;
+      height: 4rem;
+      fill: $color-primary;
+      cursor: pointer;
+    }
+  }
+
+  &__arrow--right {
+    svg {
+      width: 4rem;
+      height: 4rem;
+      fill: $color-primary;
+      cursor: pointer;
+    }
+  }
+}

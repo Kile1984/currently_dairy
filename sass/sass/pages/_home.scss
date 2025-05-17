@@ -1,0 +1,111 @@
+.services {
+  grid-column: center-start/center-end;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-column-gap: 2rem;
+}
+
+.our-story {
+  grid-column: full-start/full-end;
+
+  background-image: url(../../img/hero_02.jpg);
+  background-size: cover;
+  background-position: top;
+  color: $color-white;
+  padding: 18rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) repeat(6, minmax(15rem, 1fr)) repeat(
+      3,
+      1fr
+    );
+  justify-content: center;
+  text-align: center;
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.features {
+  grid-column: center-start/center-end;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, min-content);
+}
+
+.slider {
+  grid-column: center-start/center-end;
+  background-color: $color-white;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.deliver {
+  grid-column: center-start/center-end;
+}
+
+.testimonials {
+  grid-column: center-start/full-end;
+
+  display: grid;
+  grid-template-columns: 30% 5% 65%;
+
+  @include respond(big-desktop) {
+    grid-column: center-start/center-end;
+  }
+}
+
+.faq {
+  grid-column: 2 / 8;
+
+  display: grid;
+  grid-template-columns: 50% 30%;
+  column-gap: 14rem;
+
+  @include respond(tab-land) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 8rem;
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    grid-row-gap: 2.4rem;
+  }
+}
+
+.logos {
+  grid-column: 2 / 8;
+}
+
+.footer {
+  grid-column: full-start/full-end;
+  background-image: url('../../img/footer_bgr.png');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 12.8rem 0;
+
+  @include respond(tab-port) {
+    padding: 6.4rem 0;
+  }
+}
+
+section {
+  transition: transform 1s, opacity 1s;
+}
+
+// Intersecting sections and images
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.lazy-img {
+  filter: blur(20px);
+}

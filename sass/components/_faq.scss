@@ -14,10 +14,6 @@
     justify-content: space-between;
     cursor: pointer;
 
-    // &::after {
-    //   content: var(--icon, "+");
-    //   font-size: 5rem;
-    // }
     span {
       font-size: 4rem;
     }
@@ -32,8 +28,10 @@
 
   &__img {
     border-radius: $radius;
-    // height: 100%;
-    // width: 100%;
     justify-self: center;
+
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 }

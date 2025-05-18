@@ -187,6 +187,12 @@ body {
   align-items: center;
   padding: 1rem 4rem;
   border-radius: 16px;
+  z-index: 9;
+}
+@media only screen and (max-width: 75em) {
+  .nav {
+    z-index: 0;
+  }
 }
 @media only screen and (max-width: 37.5em) {
   .nav {
@@ -309,7 +315,7 @@ body {
   transform: translateX(0);
 }
 .nav__mobile-menu-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;

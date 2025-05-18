@@ -1,14 +1,23 @@
+@import '../components/buttons';
+@import '../components/services';
+@import '../components/our-story';
+@import '../components/features';
+@import '../components/slider-cows';
+@import '../components/deliver';
+@import '../components/testimonials';
+@import '../components/faq';
+@import '../components/logos';
+
 .services {
-  // grid-column: 2 / 8;
   grid-column: center-start/center-end;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(5, auto);
+  grid-column-gap: 2rem;
 }
 
 .our-story {
-  // grid-column: 1 / -1;
   grid-column: full-start/full-end;
 
   background-image: url(../../img/hero_02.jpg);
@@ -18,14 +27,19 @@
   padding: 18rem 0;
 
   display: grid;
-  // grid-template-columns: 50%;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(3, 1fr) repeat(6, minmax(15rem, 1fr)) repeat(
+      3,
+      1fr
+    );
   justify-content: center;
   text-align: center;
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(12, 1fr);
+  }
 }
 
 .features {
-  // grid-column: 2 / 8;
   grid-column: center-start/center-end;
 
   display: grid;
@@ -34,7 +48,6 @@
 }
 
 .slider {
-  // grid-column: 2 / 8;
   grid-column: center-start/center-end;
   background-color: $color-white;
 
@@ -43,7 +56,6 @@
 }
 
 .deliver {
-  // grid-column: 2 / 8;
   grid-column: center-start/center-end;
 }
 
@@ -82,12 +94,11 @@
 }
 
 .footer {
-  grid-column: 1 / -1;
+  grid-column: full-start/full-end;
   background-image: url('../../img/footer_bgr.png');
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
-  // padding: 12.8rem 0 18.8rem 0;
   padding: 12.8rem 0;
 
   @include respond(tab-port) {

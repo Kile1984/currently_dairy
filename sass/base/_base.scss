@@ -17,7 +17,6 @@
 html {
   // font-size: 16px;
   font-size: 62.5%; // 10px=1rem
-  position: relative;
   overflow-x: hidden;
 
   @include respond(tab-land) {
@@ -25,39 +24,28 @@ html {
   }
 
   @include respond(tab-port) {
-    font-size: 56.25%; // 9px=1rem
+    font-size: 50%; // 9px=1rem staviti da bude 50%
   }
 }
 
 body {
   box-sizing: border-box;
 }
+
 .container {
   display: grid;
-  // grid-template-columns: repeat(8, 1fr);
   grid-template-columns:
     [full-start] 1fr [center-start] repeat(6, [col-start] 1fr [col-end])
     [center-end] 1fr [full-end];
   grid-template-rows: 120vh;
 
   @include respond(tab-land) {
-    grid-template-rows: 100vh;
-  }
-
-  @include respond(big-desktop) {
     grid-template-columns:
       [full-start] 0.5fr [center-start] repeat(6, [col-start] 1fr [col-end])
       [center-end] 0.5fr [full-end];
   }
 
   @include respond(tab-port) {
-    grid-template-rows: 90vh;
-    grid-template-columns:
-      [full-start] 0.2fr [center-start] repeat(6, [col-start] 1fr [col-end])
-      [center-end] 0.2fr [full-end];
-  }
-
-  @include respond(phone) {
-    grid-template-rows: 80vh;
+    grid-template-rows: auto;
   }
 }

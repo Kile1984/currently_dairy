@@ -30,11 +30,6 @@ body {
   line-height: 1.1;
   letter-spacing: 0.2rem;
   margin-bottom: 2.4rem;
-
-  @include respond(phone) {
-    font-size: 3.6rem;
-    text-align: center;
-  }
 }
 
 .heading-3 {
@@ -44,8 +39,4 @@ body {
   font-size: $heading-3;
   font-weight: 800;
   letter-spacing: 0.05rem;
-
-  @include respond(phone) {
-    font-size: 1.8;
-  }
 }

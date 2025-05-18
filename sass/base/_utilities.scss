@@ -4,14 +4,6 @@
 
 .margin-bottom-large {
   margin-bottom: 12.8rem;
-
-  @include respond(tab-port) {
-    margin-bottom: 9.6rem;
-  }
-
-  @include respond(phone) {
-    margin-bottom: 8rem;
-  }
 }
 
 .text-center {

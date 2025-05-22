@@ -1,12 +1,65 @@
 .header {
   grid-column: full-start/full-end;
-  background-image: url(../../img/hero_01.png);
-  background-size: cover;
-  background-position: bottom;
 
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(5, min-content);
+
+  &--home {
+    background-image: url(../../img/hero_01.png);
+    background-size: cover;
+    background-position: bottom;
+    grid-template-rows: repeat(5, min-content);
+  }
+
+  &--inner {
+    background-image: url(../../img/hero_03.jpg);
+    grid-template-rows: min-content repeat(4, 1fr);
+    position: relative;
+
+    .pre-header {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-column: 1 / -1;
+      // z-index: 10;
+      background-color: $color-secondary;
+
+      @include respond(tab-port) {
+        justify-content: center;
+      }
+
+      @include respond(tab-port) {
+        grid-row: 1/2;
+      }
+
+      @include respond(phone) {
+        background-color: transparent;
+      }
+    }
+
+    .header__text {
+      grid-column: 2/7;
+    }
+
+    .header__heading {
+      font-size: $heading-2;
+      text-transform: uppercase;
+      grid-column: 1/-1;
+      grid-row: 4/5;
+      justify-self: center;
+      z-index: 8;
+      text-shadow: 1px 1px 2px $color-secondary;
+    }
+
+    .header__overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: -1;
+    }
+  }
 
   @include respond(tab-land) {
     background-image: url(../../img/hero_01_cut.png);

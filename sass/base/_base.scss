@@ -49,3 +49,23 @@ body {
     grid-template-rows: auto;
   }
 }
+
+.container.about {
+  grid-template-rows: 50rem;
+}
+
+// .container.services {
+//   display: grid;
+//   grid-template-columns:
+//     [full-start] 1fr [center-start] repeat(6, [col-start] 1fr [col-end])
+//     [center-end] 1fr [full-end];
+//   grid-template-rows: 50rem;
+// }
+
+// .container.contact {
+//   display: grid;
+//   grid-template-columns:
+//     [full-start] 1fr [center-start] repeat(6, [col-start] 1fr [col-end])
+//     [center-end] 1fr [full-end];
+//   grid-template-rows: 50rem;
+// }

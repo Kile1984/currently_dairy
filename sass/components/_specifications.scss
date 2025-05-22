@@ -1,0 +1,57 @@
+.specifications {
+  &__heading {
+    color: $color-primary;
+    grid-column: 2/-1;
+
+    @include respond(tab-port) {
+      grid-column: 1/-1;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    color: $color-secondary;
+    grid-column: 2/-1;
+  }
+
+  &__main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+  }
+
+  &__img {
+    // width: 100px;
+    height: 70px;
+
+    grid-row: 1/-1;
+    align-self: start;
+  }
+
+  &__box {
+    border: 1px solid rgba($color-primary, 0.5);
+    border-radius: 10px;
+    margin-top: 2rem;
+    padding: 2rem 2rem;
+    gap: 1rem;
+    transform: translateY(6rem);
+
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content 1fr;
+
+    transition: all 0.3s;
+
+    &:hover {
+      box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    // margin-top: 5rem;
+  }
+
+  &__box-heading {
+    color: $color-primary;
+  }
+}

@@ -1,1 +1,40 @@
+@import '../components/specifications';
+@import '../components/exclusive';
+@import '../components/environment';
 
+.specifications {
+  grid-column: center-start/center-end;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.exclusive {
+  grid-column: center-start/center-end;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.environment {
+  grid-column: center-start/center-end;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  grid-row-gap: 8.6rem;
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
+}

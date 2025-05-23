@@ -1,0 +1,13 @@
+@import '../components/services-box';
+
+.our-services {
+  grid-column: center-start/center-end;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+  }
+}

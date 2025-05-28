@@ -1,0 +1,132 @@
+.contact-form {
+  &__heading {
+    grid-column: 1/-1;
+    margin-bottom: 2.2rem;
+  }
+}
+
+.form {
+  grid-column: 1/-1;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  &__group {
+    @include respond(tab-port) {
+      grid-column: 1/-1;
+    }
+  }
+
+  &__label {
+    font-size: 1.6rem;
+    color: $color-primary;
+    transition: all 0.3s;
+    display: block;
+    transform: translateY(-7.5rem);
+
+    @include respond(tab-port) {
+      transform: translateY(-8.5rem);
+    }
+  }
+
+  &__label-textarea {
+    font-size: 1.6rem;
+    color: $color-primary;
+    transition: all 0.3s;
+    display: block;
+    transform: translateY(-23rem);
+
+    @include respond(tab-port) {
+      transform: translateY(-27rem);
+    }
+  }
+
+  &__input {
+    font-size: 1.4rem;
+    height: 45px;
+    width: 100%;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    outline: none;
+    transition: all 0.3s;
+
+    &::placeholder {
+      color: rgba($color-primary, 0.5);
+    }
+
+    &:focus:invalid {
+      border-color: red;
+    }
+
+    &:focus,
+    &:active {
+      border-color: $color-primary;
+    }
+
+    &.invalid {
+      border-color: rgb(192, 19, 19);
+    }
+
+    &.valid {
+      border-color: rgb(21, 163, 21);
+    }
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  &__msg:placeholder-shown + &__label-textarea {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0);
+  }
+
+  &__error {
+    display: block;
+    font-size: 1.6rem;
+    color: rgb(192, 19, 19);
+    transform: translateY(-2rem);
+  }
+  &__group-msg {
+    grid-column: 1/-1;
+    height: 200px;
+    margin-bottom: 3rem;
+  }
+
+  &__msg {
+    font-family: $font-heading;
+    font-size: 1.4rem;
+    grid-column: 1/-1;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    margin-top: 0.6rem;
+    outline: none;
+    transition: all 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+
+    &:focus:invalid {
+      border-color: red;
+    }
+
+    &::placeholder {
+      color: rgba($color-primary, 0.5);
+    }
+
+    &.invalid {
+      border-color: rgb(192, 19, 19);
+    }
+
+    &:focus,
+    &:active {
+      border-color: $color-primary;
+    }
+  }
+}

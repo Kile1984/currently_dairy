@@ -1,0 +1,58 @@
+.info {
+  display: grid;
+  gap: 2rem;
+
+  & > * {
+    border: 1px solid rgba($color-primary, 0.5);
+    border-radius: 10px;
+    padding: 1rem;
+    transition: all 0.3s;
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    text-align: center;
+
+    &:hover {
+      border-color: rgba($color-primary, 1);
+    }
+  }
+
+  &__phone {
+  }
+
+  &__number,
+  &:link,
+  &:visited {
+    font-size: 1.8rem;
+    color: $color-primary;
+
+    &:hover,
+    &:active {
+      color: $color-secondary;
+    }
+  }
+
+  &__mail {
+  }
+
+  &__mail-address,
+  &:link,
+  &:visited {
+    font-size: 1.8rem;
+    color: $color-primary;
+
+    &:hover,
+    &:active {
+      color: $color-secondary;
+    }
+  }
+
+  &__address {
+  }
+
+  &__street {
+    color: $color-primary;
+  }
+}

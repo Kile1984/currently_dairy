@@ -9,8 +9,13 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script defer src="js/main.js"></script>
+    <script defer src="js/map.js"></script>
+    <script defer src="js/form.js"></script>
     <title>Contact</title>
   </head>
 
@@ -83,6 +88,151 @@
 
       <div class="header__overlay"></div>
     </header>
+
+    <!-- MAP -->
+    <section class="map-area margin-bottom-large">
+      <div id="map" class="map">MAPA</div>
+      <div class="info">
+        <div class="info__phone">
+          <h3 class="heading-3">Phone</h3>
+          <a class="info__number" href="tel:000123456789">000-123-456789</a>
+        </div>
+
+        <div class="info__mail">
+          <h3 class="heading-3">Email</h3>
+          <a class="info__mail-address" href="mailto:examplemail@mail.com"
+            >examplemail@mail.com</a
+          >
+        </div>
+
+        <div class="info__address">
+          <h3 class="heading-3">Address</h3>
+          <span class="text info__street">No: BB, Belgrade</span>
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section class="contact-form margin-bottom-large">
+      <h3 class="heading-3 contact-form__heading">Contact Form</h3>
+      <form action="#" class="form" id="form" novalidate>
+        <div class="form__group">
+          <input
+            type="text"
+            class="form__input"
+            id="name"
+            name="name"
+            placeholder="Name"
+            required
+          />
+          <label for="name" class="form__label">Name</label>
+          <span class="form__error"></span>
+        </div>
+
+        <div class="form__group">
+          <input
+            type="email"
+            class="form__input"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <label for="email" class="form__label">E-mail</label>
+          <span class="form__error"></span>
+        </div>
+
+        <div class="form__group">
+          <input
+            type="tel"
+            class="form__input"
+            id="phone"
+            name="phone"
+            placeholder="Phone"
+            required
+            pattern="^\+?[0-9\s\-]{6,15}$"
+          />
+          <label for="phone" class="form__label">Phone</label>
+          <span class="form__error"></span>
+        </div>
+
+        <div class="form__group form__group-msg">
+          <textarea
+            class="form__msg"
+            id="msg"
+            name="msg"
+            rows="5"
+            placeholder="Message:"
+            required
+          ></textarea>
+          <label class="form__label-textarea" for="msg">Message:</label>
+          <span class="form__error"></span>
+        </div>
+
+        <div class="form__group">
+          <button type="submit" class="btn btn--primary form__submit">
+            Send
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials margin-bottom-large">
+      <div class="testimonials__text-box">
+        <h2 class="heading-2 testimonials__tittle">What people are saying</h2>
+        <p class="text text--dark testimonials__text">
+          Querum ipsum dolor rhuese onsectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
+          suspendisse
+        </p>
+        <button class="btn btn--primary">View more</button>
+      </div>
+
+      <div class="testimonials__slider">
+        <div class="testimonials__image">
+          <img
+            src="img/home_image_08-lazy.jpg"
+            data-src="img/home_image_08.jpg"
+            alt="Person"
+          />
+        </div>
+
+        <div class="testimonials__slider-container">
+          <div class="testimonials__slide">
+            <p class="text text--dark">
+              Ut pharetra sit amet aliquam id. Consequat semper viverra nam
+              libero justo laoreet sit amet. Porta nibh venenatis cras sed
+              felis. Eget nullam non nisi est sit amet facilisis magna. Dui
+              sapien eget mi proinyut
+            </p>
+            <cite>Thomas<span>Manager</span></cite>
+          </div>
+
+          <div class="testimonials__slide">
+            <p class="text text--dark">
+              Orci nulla pellentesque dignissim enim sit. Iaculis nunc sed augue
+              lacus viverra vitae congue eu consequat. Nunc lobortis mattis
+              aliquam faucibus purus in. Varius morbi enim nuncaucibus a
+              pellente treu
+            </p>
+            <cite>Jessica James<span>CEO</span></cite>
+          </div>
+
+          <div class="testimonials__slide">
+            <p class="text text--dark">
+              In aliquam sem fringilla ut morbi tincidunt augue interdum. Sit
+              amet consectetur adipiscing elit duis tristique sollicitudin nibh.
+              Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida
+              neque edele
+            </p>
+            <cite>Juslin<span>Director</span></cite>
+          </div>
+          <div class="dots"></div>
+        </div>
+      </div>
+    </section>
 
     <!-- FOOTER -->
     <footer class="footer">

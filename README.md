@@ -12,5 +12,5 @@
     "sass": "^1.89.0"
   }
 
-  - https://ilija-dairy.netlify.app/
+- https://ilija-dairy.netlify.app/
 
